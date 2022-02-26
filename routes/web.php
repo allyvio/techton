@@ -14,55 +14,47 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/', function () {
-    return view('home', [
-        'title' => 'Home'
 
-    ]);
-});
-
-Route::get('/about', function () {
-    return view('about', [
-        'title' => 'About'
-    ]);
-});
-
-Route::get('/news', function () {
-    return view('news', [
-        'title' => 'News'
-    ]);
-});
-
-Route::get('/gallery', function () {
-    return view('gallery', [
-        'title' => 'Gallery'
-    ]);
-});
+Route::get('/', 'PostController@index');
+Route::get('/about', 'PostController@showAbout');
+Route::get('/news', 'PostController@showNews');
 
 
 
 
 
+// Route::get('/about', function () {
+//     return view('about', [
+//         'title' => 'About'
+//     ]);
+// });
+
+// Route::get('/news', function () {
+//     return view('news', [
+//         'title' => 'News'
+//     ]);
+// });
 
 
-Route::get('/kalkulasi', function () {
-    $a = 10;
-    $b = 5;
-    $c = $a * $b;
-    return $c;
-});
+// Route::get('/kalkulasi', function () {
+//     $a = 10;
+//     $b = 5;
+//     $c = $a * $b;
+//     return $c;
+// });
 
-Route::get('/segi-tiga', function () {
-    $alas = 10;
-    $tinggi = 4;
-    $luas = 1 / 2 * $alas * $tinggi;
+// Route::get('/segi-tiga', function () {
+//     $alas = 10;
+//     $tinggi = 4;
+//     $luas = 1 / 2 * $alas * $tinggi;
 
-    return $luas;
-});
+//     return $luas;
+// });
 
-Route::get('/persegi', function (Request $request) {
-    $sisi = $request->get('sisi');
-    $luas = $sisi * $sisi;
-
-    return $luas;
-});
+// Route::get('/persegi', function (Request $request) {
+    //     $sisi = $request->get('sisi');
+    //     $luas = $sisi * $sisi;
+    
+//     return $luas;
+// });
+// Route::get('/persegi/{input}', 'PostController@luasPersegi');

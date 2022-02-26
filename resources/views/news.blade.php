@@ -1,13 +1,13 @@
 @extends('layouts.master')
 @section('content')
-<h1>List berita</h1>
+<h1 class="mt-3">List berita</h1>
 <table class="table table-hover mt-5">
     <thead>
         <tr>
             <th scope="col">#</th>
             <th scope="col">Nama berita</th>
             <th scope="col">Reporter</th>
-            <th scope="col">Tanggal tayang</th>
+            <th scope="col">Tanggal buat</th>
             <th scope="col">Action</th>
         </tr>
     </thead>
