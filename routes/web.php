@@ -18,7 +18,10 @@ use Illuminate\Http\Request;
 Route::get('/', 'PostController@index');
 Route::get('/about', 'PostController@showAbout');
 Route::get('/news', 'PostController@showNews');
+Route::get('/show-update/{id}', 'PostController@show');
 
+
+Route::post('/post-berita', 'PostController@create');
 
 
 
@@ -52,8 +55,8 @@ Route::get('/news', 'PostController@showNews');
 // });
 
 // Route::get('/persegi', function (Request $request) {
-    //     $sisi = $request->get('sisi');
-    //     $luas = $sisi * $sisi;
+//         $sisi = $request->get('sisi');
+//         $luas = $sisi * $sisi;
     
 //     return $luas;
 // });
