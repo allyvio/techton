@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -17,7 +18,9 @@ class PostController extends Controller
     }
     public function showNews()
     {
-        return view('news', ['title' => 'News']);
+        $posts = Post::all();
+        // dd($post);
+        return view('news', ['title' => 'News', 'posts' => $posts]);
     }
 
     // public function luasPersegi($input)
